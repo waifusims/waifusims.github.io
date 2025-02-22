@@ -11,6 +11,7 @@ export default function NotFoundPage() {
 	const lowerPath = pathname.toLowerCase();
 	if (CASE_INSENSITIVE_ROUTES.has(lowerPath)) {
 		redirect(lowerPath);
+		return null;
 	}
 
 	return <h1>404 - Page Not Found</h1>
