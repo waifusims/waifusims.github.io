@@ -9,10 +9,10 @@ const CASE_INSENSITIVE_ROUTES = new Set([
 export default function NotFoundPage() {
 	const pathname = usePathname();
 	const lowerPath = pathname.toLowerCase();
-	if (CASE_INSENSITIVE_ROUTES.has(lowerPath)) {
+	const shouldRedirect = CASE_INSENSITIVE_ROUTES.has(lowerPath);
+	if (shouldRedirect) {
 		redirect(lowerPath);
-		return null;
 	}
 
-	return <h1>404 - Page Not Found</h1>
+	return shouldRedirect ? null : <h1>404 - Page Not Found</h1>
 }
