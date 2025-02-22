@@ -1,5 +1,4 @@
-body
-{
+body {
 	background-color: #185F51;
 	font-family: Helvetica, Arial;
 	color: #E7FDBD;
@@ -11,8 +10,7 @@ body
 	-o-user-select: none;
 }
 
-#header
-{
+#header {
 	background-color: #002B2A;
 	flex-grow: 0;
     display: flex;
@@ -20,23 +18,20 @@ body
     padding: 10px 10px 10px 10px;
 }
 
-#headermain
-{
+#headermain {
 	display: flex;
 	flex-direction: row;
 	flex-grow: 1;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
-#headermain div
-{
+#headermain div {
     display: flex;
     flex-direction: column;
     margin: 0px 15px 0px 15px;
 }
 
-#treeSelector
-{
+#treeSelector {
 	justify-content: center;
 	display: flex;
 	flex-direction: row;
@@ -44,147 +39,130 @@ body
 	height: 40px;
 }
 
-#treeSelector div
-{
+#treeSelector div {
 	text-align: center;
 	display: flex;
 	background-color: #033B3A;
 	flex-grow: 1;
 	font-size: 24px;
 	align-items: center;
-	justify-content: center;	
+	justify-content: center;
 }
 
-#treeSelector div .selected
-{
+#treeSelector div .selected {
 	background-color: #185F51;
 }
 
-#treeSelector div:hover
-{
+#treeSelector div:hover {
 	background-color: #E7FDBD;
 	color: #033B3A;
 }
 
-#treeSelector .selected
-{
+#treeSelector .selected {
 	background-color: #185F51;
 }
 
-#skillTreeContainer
-{
+#skillTreeContainer {
 	background-color: #185F51;
 	display: flex;
 	align-items: center;
-	justify-content: center;	
+	justify-content: center;
 	height: 720px;
 }
 
-#skillTree
-{
-	background-color: none;		
+#skillTree {
+	background-color: none;
 }
 
-#info
-{
+#info {
 	color: #E7FDBD;
 	font-size: 12px;
 	margin-right: auto;
 }
 
-.unionSkillBox
-{
+.unionSkillBox {
 	color: #016C84;
 	border: 2px solid;
 	border-radius: 30px;
 	border-color: #016C84;
 	position: absolute;
 	text-align: center;
-	background-color: #ACD8E5;	
-	display: flex;	
+	background-color: #ACD8E5;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	font-size: 16px;
 }
 
-.unionSkillBox:hover
-{
+.unionSkillBox:hover {
 	color: #E7FDBD;
-	background-color: #E5885B;	
+	background-color: #E5885B;
 	border-color: #E7FDBD;
 }
 
-.unionSkillBox:active
-{
+.unionSkillBox:active {
 	color: #E5885B;
 	background-color: #E7FDBD;
 	border-color: #E5885B;
 }
 
-.skillBox
-{
+.skillBox {
 	color: #ACFFE5;
 	border: 2px solid;
 	border-radius: 30px;
 	border-color: #ACFFE5;
 	position: absolute;
 	text-align: center;
-	background-color: #019484;	
-	display: flex;	
+	background-color: #019484;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	font-size: 16px;		
+	font-size: 16px;
 }
 
-.skillBox:hover
-{
+.skillBox:hover {
 	color: #E7FDBD;
-	background-color: #E5885B;	
+	background-color: #E5885B;
 	border-color: #E7FDBD;
 }
 
-.skillBox:active
-{
+.skillBox:active {
 	color: #E5885B;
 	background-color: #E7FDBD;
 	border-color: #E5885B;
 }
 
-.inactive
-{
+.inactive {
 	border: 2px solid;
 	border-radius: 30px;
 	position: absolute;
 	text-align: center;
-	display: flex;	
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	font-size: 16px;	
+	font-size: 16px;
 	color: #D8DFD8;
 	background-color: #586F68;
 	border-color: #D8DFD8;
-}	
+}
 
-.inactive:hover
-{
+.inactive:hover {
 	color: #586F68;
 	background-color: #D8DFD8;
 	border-color: #586F68;
 }
 
-.levelBoxContainer
-{
+.levelBoxContainer {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 }
 
-.levelBox
-{
+.levelBox {
 	display: flex;
 	width: 8px;
 	height: 8px;
@@ -192,8 +170,7 @@ body
 	background-color: #002B2A;
 }
 
-.activeLevelBox
-{
+.activeLevelBox {
 	display: flex;
 	width: 8px;
 	height: 8px;
@@ -201,14 +178,12 @@ body
 	background-color: #E7FDBD;
 }
 
-.line
-{
+.line {
 	position: absolute;
 	background-color: #ACFFE5;
 }
 
-.levelReq
-{
+.levelReq {
 	position: absolute;
 	display: flex;
 	align-items: center;
@@ -223,8 +198,7 @@ body
 	margin: 2px;
 }
 
-.tooltip
-{
+.tooltip {
 	min-width: 450px;
 	max-width: 800px;
 	text-align: center;
@@ -241,17 +215,24 @@ body
     pointer-events: none;
 }
 
-.hidden
-{
+.inputcol {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 8px;
+	width: fit-content;
+	height: fit-content;
+}
+
+.inputcol > div {
+	width: 100%;
+}
+
+.hidden {
 	display: none;
 }
 
-.ad
-{	
-	margin-left: auto;
-}
-
-p
-{
+p {
 	display: inline;
 }

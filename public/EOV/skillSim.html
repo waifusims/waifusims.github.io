@@ -1,4 +1,4 @@
-<!DOCTYPE html>	
+<!DOCTYPE html>
 
 <title>Etrian Odyssey V Skill Simulator</title>
 <meta charset="utf-8"/>
@@ -11,37 +11,24 @@
 	<script type="text/javascript" src="data/classSkillForwardReqs.js"></script>
 	<script type="text/javascript" src="data/raceSkills.js"></script>
 	<script type="text/javascript" src="skillsim.js"></script>
-
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-80107214-1', 'auto');
-  ga('send', 'pageview');
-	</script>
 </head>
 
 <body onload="init()">
 	<div id="header">
 		<div id="logoinfo">
-			<img src="img/eov-logo.png" height="140px"/>	
+			<img src="img/eov-logo.png" height="140px"/>
 			<p id="info">
-				<br>		
-				Etrian Odyssey V Skill Simulator, by <a href="https://www.twitter.com/PSIDefenseUp/" style="color: #ACFFE5;" target="_blank">PSIDefenseUp</a>
+				<br>
+				Etrian Odyssey V Skill Simulator, by <a href="https://bsky.app/profile/tameiki.bsky.social" style="color: #ACFFE5;" target="_blank">PSIDefenseUp</a>
 			</p>
 		</div>
-		
+
 		<div id="headermain">
-			<div>
+			<div class="inputcol">
 				<div>
 					<strong>Level:</strong>
 					<select id="levelDropdown" onchange="changeLevel()"></select>
 				</div>
-
-				<br>
-
 				<div>
 					<strong>Retirement Level:</strong>
 					<select id="retirementDropdown" onchange="changeRetirement()">
@@ -55,8 +42,8 @@
 					</select>
 				</div>
 			</div>
-	
-			<div>
+
+			<div class="inputcol">
 				<div>
 					<strong>Race:</strong>
 					<select id="raceDropdown" onchange="changeRace()">
@@ -67,8 +54,8 @@
 					</select>
 				</div>
 			</div>
-	
-			<div>
+
+			<div class="inputcol">
 				<div>
 					<strong>Class:</strong>
 					<select id="classDropdown" onchange="changeClass()">
@@ -84,9 +71,6 @@
 						<option value="herbalist">Botanist</option>
 					</select>
 				</div>
-	
-				<br>
-	
 				<div>
 					<strong>Specialization:</strong>
 					<select id="specializationDropdown" onchange="changeSpecialization()">
@@ -96,21 +80,11 @@
 					</select>
 				</div>
 			</div>
-	
-			<div>
-				<strong>Points Remaining: <p id="remainingPointsLabel"></p>/<p id="maxPointsLabel"></p></strong>
-				<br>
-				<button onclick="resetSkillPoints()">Reset Skill Points</button>
-			</div>
-		</div>
 
-		<div class="ad" style="width:320px; height:100px;">
-			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			
-			<ins class="adsbygoogle" style="display:inline-block;width:320px;height:100px" data-ad-client="ca-pub-0696701846108353" data-ad-slot="2485608538"></ins>
-			<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
+			<div class="inputcol">
+				<div><strong>Points Remaining: <p id="remainingPointsLabel"></p>/<p id="maxPointsLabel"></p></strong></div>
+				<div><button onclick="resetSkillPoints()">Reset Skill Points</button></div>
+			</div>
 		</div>
 	</div>
 
@@ -127,11 +101,9 @@
 	<div id="skillTreeContainer">
 		<div id="skillTree">
 		</div>
-	</div>	
+	</div>
 
 	<div id="tooltip" class="hidden">
 			<p><span id="value"></span></p>
 	</div>
 </body>
-
-
